@@ -1,13 +1,17 @@
+# Binary dirs and class files
 bin
 classes
 *.class
-.DS_Store
+
+# Extracted Data Folder
 extracted
-lib/Mutations.jar
-json-output
+
+# OS X Store Files
+.DS_Store
+
+# Eclipse Config
 .classpath
 .project
-src/sandbox
-lib/jcommon*
-lib/jfreechart*
-batch-metric-history.sh
+
+# Distributable JAR
+lib/Mutations.jar

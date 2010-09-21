@@ -1,0 +1,13 @@
+bin
+classes
+*.class
+.DS_Store
+extracted
+lib/Mutations.jar
+json-output
+.classpath
+.project
+src/sandbox
+lib/jcommon*
+lib/jfreechart*
+batch-metric-history.sh

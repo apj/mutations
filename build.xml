@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Mutations" default="run">
+  <property name="dir.src" value="${basedir}/src"/>
+  <property name="dir.lib" value="${basedir}/lib"/>
+  <property name="dir.bin" value="${basedir}/bin"/>
+  <property name="dir.classes" value="${basedir}/classes"/>
+
+  <path id="libraries">
+    <fileset dir="${dir.lib}">
+      <include name="*.jar"/>
+    </fileset>
+  </path>
+ 
+  <target name="clean">
+    <delete dir="${dir.classes}"/>
+    <mkdir dir="${dir.classes}"/>
+	<delete dir="${dir.bin}"/>
+    <mkdir dir="${dir.bin}"/>
+	<delete file="${dir.lib}/${ant.project.name}.jar"/>
+  </target>
+ 
+  <target name="compile" depends="clean, copy-resources">
+    <javac srcdir="${dir.src}"
+           destdir="${dir.classes}"
+           classpathref="libraries"/>
+  </target>
+ 
+  <target name="copy-resources">
+    <copy todir="${dir.classes}">
+      <fileset dir="${dir.src}">
+        <exclude name="**/*.java"/>
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="package" depends="compile">
+	<copy todir="${dir.bin}">
+      <fileset dir="${dir.classes}" />
+      <fileset dir="${basedir}">
+		<include name="metxF"/>
+	  </fileset>
+    </copy>
+    <jar destfile="${dir.lib}/${ant.project.name}.jar" 
+		 basedir="${dir.classes}" />
+  </target>
+
+  <target name="run" depends="compile">
+    <java fork="true" classname="mutations.MetricExtractor" classpathref="libraries" jvmargs="-Xmx1224m">
+      <classpath path="${dir.classes}"/>
+      <arg line="${args}"/>
+    </java>
+  </target>
+</project>

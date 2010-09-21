@@ -1,0 +1,10 @@
+.person
+{
+	min-height: 180px;
+}
+
+.personthumb
+{
+	float: left;
+	margin-right: 10px;
+}

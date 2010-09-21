@@ -1,0 +1,367 @@
+/*
+Simple 2-col CSS style. Rajesh Vasa, 2009
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #FFFFFF;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #3C4244;
+}
+
+h1, h2, h3 {
+	margin: 0;
+    /*font-family: Georgia, "Times New Roman", Times, serif;*/
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	color: #323536;
+}
+
+h1 { font-size: 32px; }
+
+h2 { font-size: 22px; }
+
+h3 { }
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 140%;
+	text-align: justify;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+ul, ol { }
+
+blockquote { }
+
+a { color: #385562; }
+
+a:hover { text-decoration: none; }
+
+a img {
+	border: none;
+}
+
+img.left {
+	float: left;
+	margin: 7px 30px 0 0;
+}
+
+img.right {
+	float: right;
+	margin: 7px 0 0 30px;
+}
+
+hr { display: none; }
+
+.list1 {
+}
+
+.list1 li {
+	float: left;
+	line-height: normal;
+}
+
+.list1 li img {
+	margin: 0 30px 30px 0;
+}
+
+.list1 li.alt img {
+	margin-right: 0;
+}
+
+/* Header */
+
+#header-wrapper {
+}
+
+#header {
+	width: 1000px;
+	height: 40px;
+	margin: 0 auto;
+	background: #8194A1;
+	border-bottom: 1px solid #585B5C;
+}
+
+/* Menu */
+
+#menu {
+	float: left;
+	width: 680px;
+	height: 40px;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 13px 0 0 20px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	display: block;
+	float: left;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	margin-right: 14px;
+	padding: 5px 10px;
+	text-decoration: none;
+	font: 16px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+	color: #FFFFFF;
+}
+
+#menu a:hover { text-decoration: underline; }
+
+#menu .current_page_item a {
+	background: #585B5C;
+	color: #FFFFFF;
+}
+
+/* Search */
+
+#search {
+	float: right;
+	width: 305px;
+	height: 40px;
+}
+
+#search form {
+	float: right;
+	margin: 0;
+	padding: 12px 20px 0 0;
+}
+
+#search fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#search input {
+	float: left;
+	font: 12px Georgia, "Times New Roman", Times, serif;
+	border: none;
+}
+
+#search-text {
+	width: 135px;
+	height: 20px;
+	padding: 3px 0 0 5px;
+	background: #EFF6F9;
+	color: #323536;
+}
+
+#search-submit {
+	height: 22px;
+	margin-left: 12px;
+	color: #3C4244;
+}
+
+/* Page */
+
+#page {
+	width: 990px;
+	margin: 0 auto;
+	padding: 0 20px;
+	/*background: url(images/img01.png) repeat-x left top;*/
+}
+
+/** LOGO */
+
+#logo {
+	height: 100px;
+}
+
+#logo h1, #logo p {
+	float: left;
+	margin: 0;
+	padding: 0;
+	line-height: normal;
+}
+
+#logo h1 { padding-top: 25px; }
+
+#logo h1 a {
+	text-decoration: none;
+	color: #323536;
+}
+
+#logo h1 a:hover { text-decoration: underline; }
+
+#logo p {
+	padding: 45px 0 0 15px;
+	font: italic 12px Georgia, "Times New Roman", Times, serif;
+	color: #323536;
+}
+
+#logo p a {
+	text-decoration: none;
+	color: #323536;
+}
+
+#logo p a:hover { text-decoration: underline; }
+
+/* Content */
+
+#content {
+	float: left;
+	width: 740px;
+}
+
+/* Post */
+
+.about {
+	margin-top: -20px;
+	margin-bottom: 30px;
+}
+
+.post {
+	margin-bottom: 15px;
+	margin-top: 1px;
+}
+
+.post .title {
+	margin-bottom: 3px;
+	padding: 2px 0px;
+	border-bottom: 1px dashed #8E9EA5;
+}
+
+.post .meta {
+	margin: 0 0 3px 0;
+	padding: 2px 30px 2px 0px;
+	font: italic 14px Georgia, "Times New Roman", Times, serif;
+	color: #525B5F;
+}
+
+.post .meta a { color: #525B5F; }
+
+.post .entry {
+	padding: 10px 0px;
+	font-size: 1.5em;
+}
+
+.post .links {
+	margin: 0 250px 0 0;
+	padding: 0 0 0 0px;
+}
+
+.post .links .comments {
+}
+
+.post .links .permalink {
+	padding-left: 17px;
+}
+
+/* Sidebar */
+
+#sidebar {
+	float: right;
+	text-align: right;
+	width: 200px;
+	margin-top: -60px;
+}
+
+#sidebar ul {
+	margin-left: 30px;
+	padding: 0;
+	list-style: none;
+	line-height: normal;
+	text-align: left;
+}
+
+#sidebar li {
+	margin-bottom: 10px;
+	padding: 0 0 10px 0px;
+}
+
+#sidebar li ul {
+	line-height: 200%;
+}
+
+#sidebar li li {
+	margin: 0;
+	padding: 0;
+}
+
+#sidebar h2 {
+	margin: 0 0 20px 0px;
+	padding: 2px 0 2px 0px;
+	border-bottom: 1px dashed #8E9EA5;
+	font-size: 18px;
+}
+
+
+#sidebar p {
+	line-height: 200%;
+}
+
+/* Calendar */
+
+#calendar {
+}
+
+#calendar caption {
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+
+#calendar table {
+	width: 100%;
+	border-collapse: collapse;
+	border-right: 1px solid #F5F2EF;
+}
+
+#calendar thead th {
+	padding: 5px 0;
+	text-align: center;
+	border-top: 1px solid #F5F2EF;
+	border-left: 1px solid #F5F2EF;
+	background: #F5F2EF;
+}
+
+#calendar tbody td {
+	padding: 5px 0;
+	text-align: center;
+	border-top: 1px solid #F5F2EF;
+	border-left: 1px solid #F5F2EF;
+}
+
+#calendar tfoot td {
+	padding: 5px;
+}
+
+#calendar tfoot #next {
+	text-align: right;
+}
+
+#calendar #today {
+	background: #E7F1E1;
+}
+
+/* Footer */
+
+#footer {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0;
+	background: #333333;
+}
+
+#footer p {
+	margin-top: 30px;
+	padding: 4px 0;
+	text-align: center;
+	line-height: normal;
+	color: #B5ADA5;
+	font-size: 10px;
+}
+
+#footer a {
+	color: #B5ADA5;
+}

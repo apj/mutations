@@ -75,6 +75,6 @@ elif [ "$1" = "xerces" ]; then pf="xerces/xerces.versions"
 elif [ "$1" = "xwork" ]; then pf="xwork/xwork.versions"
 fi
 
-java $minMem $maxMem -classpath $cPath engine.MetricExtractor $pf $2 $3 $4 $5 $6 $7 $8 $9
+java $minMem $maxMem -classpath $cPath mutations.MetricExtractor $pf $2 $3 $4 $5 $6 $7 $8 $9
 
 echo "Finished Processing Data Set A at `date`" 1>&2

@@ -41,7 +41,7 @@ public class TermFrequencyReportBuilder extends TabularReportBuilder
 		int maxValue = Integer.parseInt(config.getEntry(EReportConfigOption.MAX_VALUE));
 		
 		Map<Integer, Integer> daysSinceBirth = new TreeMap<Integer, Integer>();
-		Map<Integer, Map<String, Integer>> versionTermCountMap = VocabularyReportUtil.getVocabularyUsageHistory(history);
+		Map<Integer, Map<String, Integer>> versionTermCountMap = VocabularyReportUtil.getVocabularyUsageHistory(history, daysSinceBirth);
 				
 		Map<Integer, int[]> versionTermFreqDistMap = new TreeMap<Integer, int[]>();
 		VocabularyReportUtil.extractTermFreqDists(versionTermCountMap, versionTermFreqDistMap, maxValue);

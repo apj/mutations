@@ -113,7 +113,7 @@ public class MetricExtractor
 		{
 			EReportConfigOption option = requiredConfigOptions[i];
 			
-			String specifiedValue = args[i + 4];
+			String specifiedValue = args[i + 3];
 			
 			boolean validValue = ReportConfigUtil.validConfigOptionValue(option, specifiedValue);
 			
@@ -135,8 +135,8 @@ public class MetricExtractor
 		usageFormatString.append("\r\n");
 		usageFormatString.append("Usage:").append("\r\n");
 		
-		usageFormatString.append("\tVERSIONS_FILE REPORT_CODE SHOW_REPORT_HEADER SHOW_PROCESSING [REPORT_ARG_1] [REPORT_ARG_2] [REPORT_ARG_3]").append("\r\n\r\n");
-		usageFormatString.append("\te.g.: ant/ant.versions 20 y y methodCount 0 ,");
+		usageFormatString.append("\tVERSIONS_FILE REPORT_CODE SHOW_REPORT_HEADER [REPORT_ARG_1] [REPORT_ARG_2] [REPORT_ARG_3]").append("\r\n\r\n");
+		usageFormatString.append("\te.g.: ant/ant.versions 20 y methodCount 0 ,");
 		
 		System.out.println(usageFormatString.toString());
 	}

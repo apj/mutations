@@ -29,12 +29,16 @@ public class ReportConfigUtil
 		requiredConfigOptionsMap.put(EReportType.FOCUS, new EReportConfigOption[] {});
 		requiredConfigOptionsMap.put(EReportType.FREQUENCY, new EReportConfigOption[] { EReportConfigOption.METRIC, EReportConfigOption.MAX_VALUE, EReportConfigOption.RELATIVE });
 		requiredConfigOptionsMap.put(EReportType.PREDICTION, new EReportConfigOption[] { EReportConfigOption.ABSOLUTE_ERROR });
-		requiredConfigOptionsMap.put(EReportType.TOKEN_HISTORY, new EReportConfigOption[] {});
-		requiredConfigOptionsMap.put(EReportType.TOKEN_GINI, new EReportConfigOption[] {});
-		requiredConfigOptionsMap.put(EReportType.TOKEN_MODIFICATION, new EReportConfigOption[] {});
-		requiredConfigOptionsMap.put(EReportType.TOKEN_FREQUENCY, new EReportConfigOption[] { EReportConfigOption.MAX_VALUE });
-		requiredConfigOptionsMap.put(EReportType.TOKEN_OUTLIER, new EReportConfigOption[] { });
-		requiredConfigOptionsMap.put(EReportType.TOKEN_HISTORY_RANKED, new EReportConfigOption[] { });
+		requiredConfigOptionsMap.put(EReportType.VOCABULARY_GROWTH, new EReportConfigOption[] {});
+		requiredConfigOptionsMap.put(EReportType.VOCABULARY_MODIFICATION, new EReportConfigOption[] {});
+		requiredConfigOptionsMap.put(EReportType.TERM_USAGE_HISTORY, new EReportConfigOption[] {});
+		requiredConfigOptionsMap.put(EReportType.TERM_GINI, new EReportConfigOption[] {});
+		requiredConfigOptionsMap.put(EReportType.TERM_FREQUENCY, new EReportConfigOption[] { EReportConfigOption.MAX_VALUE });
+		requiredConfigOptionsMap.put(EReportType.TERM_FREQUENCY_VS_AGE, new EReportConfigOption[] {});
+		requiredConfigOptionsMap.put(EReportType.TERM_OUTLIER, new EReportConfigOption[] {});
+		requiredConfigOptionsMap.put(EReportType.TERM_HISTORY_RANKED, new EReportConfigOption[] {});
+		requiredConfigOptionsMap.put(EReportType.POPULAR_TERM, new EReportConfigOption[] { });
+		requiredConfigOptionsMap.put(EReportType.POPULAR_TERM_HISTORY, new EReportConfigOption[] { });
 	}
 	
 	/**

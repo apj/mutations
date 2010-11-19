@@ -591,6 +591,43 @@ public class ReportBuilderUtil
 		if (coeffs[2] > 0.01) type = "Super-Linear";
     	
     	if (regression.getAdjustedR2() < 0.65) type += "*";  // model does not fit too well
+    	// TODO: Include checking for errors that are normally distributed
+    	
+    	return type;
+    }
+    
+    /**
+	 * 
+	 * @param metricGrowthValues
+	 * @return
+	 */
+    public static String getGrowthRateType(long[] metricGrowthValues)
+    {
+    	int versionCount = metricGrowthValues.length;
+    	
+    	//Populate xValues with version numbers
+    	double[] xValues = new double[versionCount];
+		for (int i = 0; i < xValues.length; i++)
+			xValues[i] = i + 1;
+    		
+    	//Retrieve metric count yValues
+    	double[] yValues = new double[xValues.length];
+    	int startIndex = (versionCount - xValues.length);
+    	
+		for (int i = startIndex; i < versionCount; i++)
+			yValues[i - startIndex] = metricGrowthValues[i];
+    	
+    	Regression regression = new Regression(xValues, yValues);
+    	regression.polynomial(2);
+    	
+    	double[] coeffs = regression.getBestEstimates();
+    	
+		String type = "Linear";
+		if (coeffs[2] < -0.01) type = "Sub-Linear";
+		if (coeffs[2] > 0.01) type = "Super-Linear";
+    	
+    	if (regression.getAdjustedR2() < 0.65) type += "*";  // model does not fit too well
+    	// TODO: Include checking for errors that are normally distributed
     	
     	return type;
     }

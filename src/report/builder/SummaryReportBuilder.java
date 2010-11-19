@@ -43,6 +43,9 @@ public class SummaryReportBuilder extends TabularReportBuilder
 	@Override
 	protected String getHeader()
 	{
+		if(!config.getEntry(EReportConfigOption.SHOW_HEADER).equals("y"))
+			return null;
+			
 		String separator = config.getSeparator();
 
 		StringBuilder header = new StringBuilder();

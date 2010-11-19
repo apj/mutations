@@ -19,7 +19,6 @@ public class ConfigManager
 	static
 	{
 		String configFile = System.getenv("MUTATIONS_CONFIG");
-		
 		configFileName = configFile != null ? configFile : "Mutations.properties";
 	}
 	

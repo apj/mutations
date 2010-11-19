@@ -11,11 +11,15 @@ import report.builder.PredictionReportBuilder;
 import report.builder.RawCountReportBuilder;
 import report.builder.ReportBuilder;
 import report.builder.SummaryReportBuilder;
-import report.builder.token.TokenFrequencyReportBuilder;
-import report.builder.token.TokenGiniReportBuilder;
-import report.builder.token.TokenHistoryReportBuilder;
-import report.builder.token.TokenModificationReportBuilder;
-import report.builder.token.TokenOutlierReportBuilder;
+import report.builder.vocab.PopularTermHistoryReportBuilder;
+import report.builder.vocab.PopularTermReportBuilder;
+import report.builder.vocab.TermFrequencyAgeReportBuilder;
+import report.builder.vocab.TermFrequencyReportBuilder;
+import report.builder.vocab.TermGiniReportBuilder;
+import report.builder.vocab.TermOutlierReportBuilder;
+import report.builder.vocab.TermUsageHistoryReportBuilder;
+import report.builder.vocab.VocabularyGrowthReportBuilder;
+import report.builder.vocab.VocabularyModificationReportBuilder;
 
 /**
  * Factory class that generates reports based on specified configurations
@@ -79,23 +83,35 @@ public class ReportFactory
 			case FOCUS:
 				builder = new FocusReportBuilder();
 				break;
-			case TOKEN_HISTORY:
-				builder = new TokenHistoryReportBuilder();
+			case VOCABULARY_GROWTH:
+				builder = new VocabularyGrowthReportBuilder();
 				break;
-			case TOKEN_MODIFICATION:
-				builder = new TokenModificationReportBuilder();
+			case VOCABULARY_MODIFICATION:
+				builder = new VocabularyModificationReportBuilder();
 				break;
-			case TOKEN_GINI:
-				builder = new TokenGiniReportBuilder();
+			case TERM_USAGE_HISTORY:
+				builder = new TermUsageHistoryReportBuilder();
 				break;
-			case TOKEN_FREQUENCY:
-				builder = new TokenFrequencyReportBuilder();
+			case TERM_GINI:
+				builder = new TermGiniReportBuilder();
 				break;
-			case TOKEN_OUTLIER:
-				builder = new TokenOutlierReportBuilder();
+			case TERM_FREQUENCY:
+				builder = new TermFrequencyReportBuilder();
 				break;
-			case TOKEN_HISTORY_RANKED:
-				builder = new TokenHistoryReportBuilder();
+			case TERM_FREQUENCY_VS_AGE:
+				builder = new TermFrequencyAgeReportBuilder();
+				break;
+			case POPULAR_TERM:
+				builder = new PopularTermReportBuilder();
+				break;
+			case POPULAR_TERM_HISTORY:
+				builder = new PopularTermHistoryReportBuilder();
+				break;
+			case TERM_OUTLIER:
+				builder = new TermOutlierReportBuilder();
+				break;
+			case TERM_HISTORY_RANKED:
+				builder = new TermUsageHistoryReportBuilder();
 				break;
 		}
 		

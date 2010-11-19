@@ -83,4 +83,9 @@ public class History
 		
 		this.processingStatus = processingStatus;
 	}
+
+	public String getVersionID(int rsn)
+	{
+		return versions.get(rsn);
+	}
 }
